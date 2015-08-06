@@ -115,7 +115,7 @@ module Ratyrate
   module ClassMethods
 
     def ratyrate_rater
-      has_many :ratings_given, class_name: 'Rate', foreign_key: :rater_id
+      has_many :ratings_given, class_name: 'Rate', as: :rater
     end
 
     def ratyrate_rateable(*dimensions)
